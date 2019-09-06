@@ -88,6 +88,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="U_Conexao.pas"/>
+        <DCCReference Include="U_BaseControl.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
