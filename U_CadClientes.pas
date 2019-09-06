@@ -36,6 +36,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,6 +64,23 @@ procedure TF_CadClientes.btnIncluirClick(Sender: TObject);
 begin
   inherited;
   edtCPF.SetFocus;
+end;
+
+procedure TF_CadClientes.btnPesquisarClick(Sender: TObject);
+begin
+  if FCliente.Pesquisar then
+  begin
+    edtCodigo.Text   := IntToStr(FCliente.CLIENTE_ID);
+    edtNome.Text     := FCliente.NOME;
+    edtCPF.Text      := FCliente.CPF;
+    edtEndereco.Text := FCliente.ENDERECO;
+    edtBairro.Text   := FCliente.BAIRRO;
+    edtCidade.Text   := FCliente.CIDADE;
+    edtEstado.Text   := FCliente.ESTADO;
+    edtCEP.Text      := FCliente.CEP;
+
+    inherited;
+  end;
 end;
 
 procedure TF_CadClientes.btnSalvarClick(Sender: TObject);

@@ -45,6 +45,7 @@ object F_Pesquisa: TF_Pesquisa
       Top = 11
       Width = 588
       Height = 21
+      CharCase = ecUpperCase
       TabOrder = 0
       OnChange = edtPesquisaChange
     end

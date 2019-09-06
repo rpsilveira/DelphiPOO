@@ -8,7 +8,7 @@ unit U_ClienteControl;
 
 interface
 
-uses U_BaseControl, System.SysUtils, Data.DB;
+uses U_BaseControl, System.SysUtils, Data.DB, Vcl.Controls;
 
 type
   TCliente = class(TBaseControl)
@@ -47,11 +47,14 @@ type
     function Alterar: Boolean;
     function Excluir: Boolean;
     function BuscarDados(pID: Integer): Boolean;
+    function Pesquisar: Boolean;
   end;
 
 implementation
 
 { TCliente }
+
+uses U_Pesquisa;
 
 function TCliente.BuscarDados(pID: Integer): Boolean;
 begin
@@ -110,6 +113,26 @@ begin
     Result := query.ExecSQL > 0;
   except on E: Exception do
     raise Exception.CreateFmt('Erro ao alterar o cliente: %s', [E.Message]);
+  end;
+end;
+
+function TCliente.Pesquisar: Boolean;
+begin
+  if not Assigned(F_Pesquisa) then
+    F_Pesquisa := TF_Pesquisa.Create(Self);
+  try
+    F_Pesquisa.Caption   := 'Pesquisa de Clientes';
+    F_Pesquisa.SQL_BASE  := 'select CLIENTE_ID as "Código", NOME as "Nome" from TB_CLIENTES';
+    F_Pesquisa.SQL_WHERE := 'where NOME like %s';
+    F_Pesquisa.SQL_ORDER := 'order by NOME';
+    F_Pesquisa.ShowModal;
+
+    Result := F_Pesquisa.ModalResult = mrOk;
+
+    if Result then
+      Result := BuscarDados(F_Pesquisa.ID);
+  finally
+    FreeAndNil(F_Pesquisa);
   end;
 end;
 
