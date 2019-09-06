@@ -2,7 +2,8 @@ program projDelphiPOO;
 
 uses
   Vcl.Forms,
-  U_Principal in 'U_Principal.pas' {F_Principal};
+  U_Principal in 'U_Principal.pas' {F_Principal},
+  U_Conexao in 'U_Conexao.pas';
 
 {$R *.res}
 
