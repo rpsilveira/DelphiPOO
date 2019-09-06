@@ -7,7 +7,8 @@ uses
   U_BaseControl in 'U_BaseControl.pas',
   U_ClienteControl in 'U_ClienteControl.pas',
   U_BaseCadastro in 'U_BaseCadastro.pas' {F_BaseCadastro},
-  U_CadClientes in 'U_CadClientes.pas' {F_CadClientes};
+  U_CadClientes in 'U_CadClientes.pas' {F_CadClientes},
+  U_Pesquisa in 'U_Pesquisa.pas' {F_Pesquisa};
 
 {$R *.res}
 

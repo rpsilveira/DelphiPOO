@@ -98,6 +98,10 @@
             <Form>F_CadClientes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="U_Pesquisa.pas">
+            <Form>F_Pesquisa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
