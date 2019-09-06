@@ -6,7 +6,8 @@ uses
   U_Conexao in 'U_Conexao.pas',
   U_BaseControl in 'U_BaseControl.pas',
   U_ClienteControl in 'U_ClienteControl.pas',
-  U_BaseCadastro in 'U_BaseCadastro.pas' {F_BaseCadastro};
+  U_BaseCadastro in 'U_BaseCadastro.pas' {F_BaseCadastro},
+  U_CadClientes in 'U_CadClientes.pas' {F_CadClientes};
 
 {$R *.res}
 

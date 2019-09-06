@@ -83,6 +83,8 @@ end;
 
 function TCliente.Incluir: Boolean;
 begin
+  CLIENTE_ID := GetID('SEQ_TB_CLIENTES');
+
   try
     query.Close;
     query.SQL.Clear;

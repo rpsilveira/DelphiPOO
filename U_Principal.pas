@@ -11,6 +11,7 @@ type
     MainMenu1: TMainMenu;
     Cadastros1: TMenuItem;
     Clientes1: TMenuItem;
+    procedure Clientes1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,5 +24,18 @@ var
 implementation
 
 {$R *.dfm}
+
+uses U_CadClientes;
+
+procedure TF_Principal.Clientes1Click(Sender: TObject);
+begin
+  if not Assigned(F_CadClientes) then
+    F_CadClientes := TF_CadClientes.Create(Self);
+  try
+    F_CadClientes.ShowModal;
+  finally
+    FreeAndNil(F_CadClientes);
+  end;
+end;
 
 end.

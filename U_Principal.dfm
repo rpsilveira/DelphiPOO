@@ -22,6 +22,7 @@ object F_Principal: TF_Principal
       Caption = 'Cadastros'
       object Clientes1: TMenuItem
         Caption = 'Clientes'
+        OnClick = Clientes1Click
       end
     end
   end
