@@ -14,6 +14,7 @@ object F_BaseCadastro: TF_BaseCadastro
   Font.Style = []
   OldCreateOrder = False
   Position = poMainFormCenter
+  OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -24,9 +25,6 @@ object F_BaseCadastro: TF_BaseCadastro
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitLeft = 232
-    ExplicitTop = 128
-    ExplicitWidth = 185
     object sep1: TBevel
       Left = 244
       Top = 1
@@ -54,9 +52,6 @@ object F_BaseCadastro: TF_BaseCadastro
       Caption = 'Incluir'
       TabOrder = 0
       OnClick = btnIncluirClick
-      ExplicitLeft = 288
-      ExplicitTop = 8
-      ExplicitHeight = 25
     end
     object btnAlterar: TBitBtn
       AlignWithMargins = True
@@ -68,7 +63,6 @@ object F_BaseCadastro: TF_BaseCadastro
       Caption = 'Alterar'
       TabOrder = 1
       OnClick = btnAlterarClick
-      ExplicitLeft = 166
     end
     object btnExcluir: TBitBtn
       AlignWithMargins = True
@@ -80,8 +74,6 @@ object F_BaseCadastro: TF_BaseCadastro
       Caption = 'Excluir'
       TabOrder = 2
       OnClick = btnExcluirClick
-      ExplicitLeft = 237
-      ExplicitTop = 12
     end
     object btnSalvar: TBitBtn
       AlignWithMargins = True
@@ -93,7 +85,6 @@ object F_BaseCadastro: TF_BaseCadastro
       Caption = 'Salvar'
       TabOrder = 3
       OnClick = btnSalvarClick
-      ExplicitLeft = 270
     end
     object btnCancelar: TBitBtn
       AlignWithMargins = True
@@ -105,7 +96,6 @@ object F_BaseCadastro: TF_BaseCadastro
       Caption = 'Cancelar'
       TabOrder = 4
       OnClick = btnCancelarClick
-      ExplicitLeft = 443
     end
     object btnPesquisar: TBitBtn
       AlignWithMargins = True
@@ -117,7 +107,6 @@ object F_BaseCadastro: TF_BaseCadastro
       Caption = 'Pesquisar'
       TabOrder = 5
       OnClick = btnPesquisarClick
-      ExplicitLeft = 556
     end
   end
 end

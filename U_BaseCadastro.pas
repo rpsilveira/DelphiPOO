@@ -32,6 +32,7 @@ type
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnPesquisarClick(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
     FstatusCad: TStatusCad;
     procedure SetstatusCad(const Value: TStatusCad);
@@ -104,6 +105,14 @@ end;
 procedure TF_BaseCadastro.btnSalvarClick(Sender: TObject);
 begin
   statusCad := stsConsulta;
+end;
+
+procedure TF_BaseCadastro.FormCloseQuery(Sender: TObject;
+  var CanClose: Boolean);
+begin
+  CanClose := statusCad in [stsVazio, stsConsulta];
+  if not CanClose then
+    Application.MessageBox('Salve ou cancele antes de sair!', 'Aviso', MB_ICONWARNING);
 end;
 
 procedure TF_BaseCadastro.FormShow(Sender: TObject);
