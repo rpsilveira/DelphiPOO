@@ -112,7 +112,7 @@ begin
 
     Result := query.ExecSQL > 0;
   except on E: Exception do
-    raise Exception.CreateFmt('Erro ao alterar o cliente: %s', [E.Message]);
+    raise Exception.CreateFmt('Erro ao incluir o cliente: %s', [E.Message]);
   end;
 end;
 
@@ -153,7 +153,7 @@ begin
 
     Result := query.ExecSQL > 0;
   except on E: Exception do
-    raise Exception.CreateFmt('Erro ao incluir o cliente: %s', [E.Message]);
+    raise Exception.CreateFmt('Erro ao alterar o cliente: %s', [E.Message]);
   end;
 end;
 
