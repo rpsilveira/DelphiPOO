@@ -27,6 +27,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnConfirmaClick(Sender: TObject);
+    procedure btnLimparClick(Sender: TObject);
   private
     { Private declarations }
     dataset: TSQLQuery;
@@ -57,6 +58,11 @@ begin
   ID := Integer(lstPesquisa.Selected.Data); //recupera o ID do item selecionado
 
   ModalResult := mrOk;
+end;
+
+procedure TF_Pesquisa.btnLimparClick(Sender: TObject);
+begin
+  edtPesquisa.Clear;
 end;
 
 procedure TF_Pesquisa.edtPesquisaChange(Sender: TObject);

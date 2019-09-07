@@ -26,9 +26,6 @@ object F_Pesquisa: TF_Pesquisa
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitLeft = 232
-    ExplicitTop = 128
-    ExplicitWidth = 185
     object btnLimpar: TSpeedButton
       Left = 608
       Top = 12
@@ -39,6 +36,7 @@ object F_Pesquisa: TF_Pesquisa
       ParentShowHint = False
       ShowHint = True
       Visible = False
+      OnClick = btnLimparClick
     end
     object edtPesquisa: TEdit
       Left = 16
@@ -65,10 +63,6 @@ object F_Pesquisa: TF_Pesquisa
     TabOrder = 1
     ViewStyle = vsReport
     OnDblClick = btnConfirmaClick
-    ExplicitLeft = 120
-    ExplicitTop = 47
-    ExplicitWidth = 250
-    ExplicitHeight = 150
   end
   object pnlBotoes: TPanel
     Left = 0
@@ -77,9 +71,6 @@ object F_Pesquisa: TF_Pesquisa
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitLeft = 232
-    ExplicitTop = 128
-    ExplicitWidth = 185
     DesignSize = (
       645
       41)
