@@ -85,7 +85,7 @@ object F_Pesquisa: TF_Pesquisa
       41)
     object btnConfirma: TBitBtn
       Left = 475
-      Top = 6
+      Top = 9
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]

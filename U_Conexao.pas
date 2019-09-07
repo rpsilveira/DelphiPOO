@@ -46,6 +46,7 @@ begin
     FConnection.Params.Values['User_Name']   := 'SYSTEM';
     FConnection.Params.Values['Password']    := '123456';
     FConnection.Params.Values['Decimal Separator'] := FormatSettings.DecimalSeparator; //evita problemas com campos float
+    FConnection.Connected := True;
   except on E: Exception do
     raise Exception.CreateFmt('Erro ao conectar com o banco de dados: %s', [E.Message]);
   end;
